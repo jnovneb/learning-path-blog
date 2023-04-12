@@ -12,3 +12,6 @@ user.update!(
   password_confirmation: "Jnovella"
 )
 
+#100.times do |i|
+  #BlogPost.create title:"Blog post #{i}", content: "Hello world", published_at: Time.current
+  #end
