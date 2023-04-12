@@ -12,6 +12,7 @@ user.update!(
   password_confirmation: "Jnovella"
 )
 
-#100.times do |i|
-  #BlogPost.create title:"Blog post #{i}", content: "Hello world", published_at: Time.current
-  #end
+100.times do |i|
+  blog_post = BlogPost.where(title:"Blog post #{i}").first_or_initialize
+  blog_post.update(content:"Hello world", published_at: Time.current)
+end
